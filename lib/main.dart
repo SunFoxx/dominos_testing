@@ -3,6 +3,8 @@ import 'package:dominos_test/widgets/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'theme/app_theme.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -15,14 +17,7 @@ class MyApp extends StatelessWidget {
       create: (_) => ScreenBloc(),
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          textTheme: TextTheme(
-            headline5: TextStyle(
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-        ),
+        theme: AppTheme,
         home: MainScreen(),
       ),
     );
